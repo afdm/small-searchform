@@ -2,10 +2,12 @@ const novumnovemSearchBar = () => {
   const button = document.querySelector(".searchform .button");
   const input = document.querySelector(".searchform .input");
 
+  const isFormOpen = () => input.classList.contains("open");
+
   const toggleOnOffSearchform = () => {
     input.classList.toggle("open");
 
-    if (input.classList.contains("open")) {
+    if (isFormOpen()) {
       input.focus();
     } else {
       input.blur();
@@ -14,9 +16,7 @@ const novumnovemSearchBar = () => {
   };
 
   const HandleSearchformClickAway = () => {
-    isFormOpen = input.classList.contains("open");
-
-    if (document.activeElement != input && isFormOpen) {
+    if (document.activeElement != input && isFormOpen()) {
       toggleOnOffSearchform();
     }
   };
