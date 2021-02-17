@@ -2,30 +2,27 @@ const novumnovemSearchBar = () => {
   const button = document.querySelector(".searchform .button");
   const input = document.querySelector(".searchform .input");
 
-  const searchformAction = () => {
+  const toggleOnOffSearchform = () => {
     input.classList.toggle("open");
 
     if (input.classList.contains("open")) {
       input.focus();
     } else {
       input.blur();
+      input.value = "";
     }
   };
 
-  button.addEventListener("click", () => searchformAction());
-  
-  window.addEventListener("click", (e) => {
-    const target = e.target;
+  const HandleSearchformClickAway = () => {
+    isFormOpen = input.classList.contains("open");
 
-    const isFff =
-      target === button ||
-      Array.from(button.childNodes).includes(target) ||
-      Array.from(target.childNodes).length === 0;
-
-    if (input.classList.contains("open") && !isFff) {
-      searchformAction();
+    if (document.activeElement != input && isFormOpen) {
+      toggleOnOffSearchform();
     }
-  });
+  };
+
+  button.addEventListener("click", () => toggleOnOffSearchform());
+  window.addEventListener("click", () => HandleSearchformClickAway());
 };
 
 window.addEventListener("load", novumnovemSearchBar);
