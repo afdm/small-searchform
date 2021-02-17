@@ -30,7 +30,7 @@ main {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(-25%, -45%); // this is visualy adjusted !
+    transform: translate(-25%, -43%); // this is visualy adjusted !
 
     border: none;
     border-radius: 50%;
@@ -44,15 +44,17 @@ main {
   }
 
   .input {
-    padding: 0.5rem 2.5rem 0.5rem 0.3rem;
+    padding: 0;
     border: none;
-    border-radius: 30px;
+
     opacity: 0;
     width: 0;
-    transition: width 0.6s, opacity 0.8s;
+    transition: width 0.6s, opacity 0.6s;
 
     &.open {
       width: 100%;
+      border-radius: 30px;
+      padding: 0.5rem 2.5rem 0.5rem 0.3rem;
       border: solid #001947 2px;
       opacity: 1;
     }

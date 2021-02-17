@@ -1,5 +1,4 @@
 const novumnovemSearchBar = () => {
-  const searchform = document.querySelector(".searchform");
   const button = document.querySelector(".searchform .button");
   const input = document.querySelector(".searchform .input");
 
@@ -14,6 +13,19 @@ const novumnovemSearchBar = () => {
   };
 
   button.addEventListener("click", () => searchformAction());
+  
+  window.addEventListener("click", (e) => {
+    const target = e.target;
+
+    const isFff =
+      target === button ||
+      Array.from(button.childNodes).includes(target) ||
+      Array.from(target.childNodes).length === 0;
+
+    if (input.classList.contains("open") && !isFff) {
+      searchformAction();
+    }
+  });
 };
 
 window.addEventListener("load", novumnovemSearchBar);
