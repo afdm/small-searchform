@@ -6,7 +6,7 @@
 }
 
 *:focus {
-  outline: #001947 dashed thin;
+  outline: none;
 }
 
 main {
