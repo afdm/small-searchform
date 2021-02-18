@@ -1,3 +1,5 @@
 # Small Searchform
 
-Your can see the demo : [https://novumnovem.fr/](https://novumnovem.fr/)
+Your can see the snippet in action (in a Elementor widget) here : [https://novumnovem.fr/](https://novumnovem.fr/)
+
+![Small Search Form - Animated gif demo](demo/demo.gif)

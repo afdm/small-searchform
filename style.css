@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+*:focus {
+  outline: #001947 dashed thin;
+}
+
 main {
   display: -ms-grid;
   display: grid;

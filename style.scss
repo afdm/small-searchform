@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: #001947 dashed thin; // the outline is useful for accessibility you should keep it !
+  // outline: none// for the demo;
+}
+
 main {
   display: grid;
   place-items: center;
